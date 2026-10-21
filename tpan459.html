@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Sign Language (NZSL)</title>
+    <link rel="stylesheet" type="text/css" href="tpan459.css">
+    <link rel="icon" type="image/svg+xml" href="https://mano.nz/resources/NZSL-Logo.svg">
+    <script src="tpan459.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>New Zealand Sign Language (NZSL)</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#signs">Signs</a>
+            <a href="#register">Register</a>
+            <a href="#guestbook">Guestbook</a>
+            <a href="#events">Events</a>
+            <a href="#plots">Plots</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            New Zealand Sign Language (NZSL), or Te Reo Turi, is one of Aotearoa New Zealand's three official languages.
+            NZSL is a rich and expressive language used by Deaf people and the wider Deaf community throughout New Zealand.
+        </p>
+        <p>
+            This application has been designed to help beginners take their first steps in learning NZSL.
+            Explore a selection of signs, practise your vocabulary, discover upcoming events, and connect with other learners through the guest book.
+        </p>
+        <p>
+            Your NZSL journey starts here.
+        </p>
+    </section>
+
+    <section id="signs">
+        <h2>Signs</h2>
+        <label for="sign-search">Search signs</label>
+        <input type="text" id="sign-search" placeholder="Search signs...">
+        <div id="signs-list"></div>
+    </section>
+
+    <section id="register">
+        <h2>Register</h2>
+        <div>
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username">
+
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password">
+
+            <button type="button" id="reg-button">Register</button>
+            <p id="reg-message"></p>
+        </div>
+    </section>
+
+    <section id="guestbook">
+        <h2>Guestbook</h2>
+        <p id="login-status">Not logged in.</p>
+        <button type="button" id="logout-button" hidden>Log out</button>
+
+        <div>
+            <label for="comment-text">Your comment</label>
+            <input type="text" id="comment-text">
+            <button type="button" id="post-button">Post</button>
+        </div>
+        <p id="comment-message"></p>
+
+        <iframe id="comments-frame" src="http://localhost:5000/api/Comments"
+                title="Recent guestbook comments"></iframe>
+
+        <dialog id="login-dialog">
+            <h3>Log in to post a comment</h3>
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password">
+            <p id="login-message"></p>
+            <button type="button" id="login-submit">Log in</button>
+            <button type="button" id="login-cancel">Cancel</button>
+        </dialog>
+    </section>
+
+    <section id="events">
+        <h2>Events</h2>
+        <div id="events-list"></div>
+    </section>
+
+    <section id="plots">
+        <h2>Plots</h2>
+        <div id="plot-container"></div>
+        <h3>Raw data</h3>
+        <div id="plot-data"></div>
+    </section>
+
+
+    <footer>
+        <span id="version"></span>
+    </footer>
+</body>
+</html>
