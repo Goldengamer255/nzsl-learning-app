@@ -1,6 +1,6 @@
 # NZSL Learning Web App
 
-A single-page front end for learning **New Zealand Sign Language (NZSL)**, built with plain HTML, CSS and vanilla JavaScript (no frameworks or libraries). It was written for COMPSCI 335 Assignment 4 and talks to a provided REST API (`nzsl-svc`) running on `http://localhost:5000`.
+A single-page front end for learning **New Zealand Sign Language (NZSL)**, built with plain HTML, CSS and vanilla JavaScript (no frameworks or libraries). It talks to a REST API service (`nzsl-svc`) running on `http://localhost:5000`.
 
 ## Features
 
@@ -25,7 +25,7 @@ tpan459.js     All client-side logic (fetching, parsing, rendering, auth, charts
 
 ## Running it
 
-1. Start the NZSL API service (supplied with the course) so it is listening on `http://localhost:5000`.
+1. Start the NZSL API service so it is listening on `http://localhost:5000`.
 2. Open `tpan459.html` in a browser (or serve the folder with any static file server).
 
 If the server is not running, each section degrades gracefully with a message such as "Signs unavailable." instead of breaking.
@@ -64,5 +64,4 @@ If the server is not running, each section degrades gracefully with a message su
 
 ## Notes
 
-- The backend service (`nzsl-svc`) was supplied by the course and is intentionally not included in this repository.
-- Author: Tanush Panu (`tpan459`), University of Auckland.
+- The backend service (`nzsl-svc`) is not included in this repository.
